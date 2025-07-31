@@ -1,0 +1,110 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.addBtn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addBtn:hover {
+  background: #45a049;
+}
+
+.tableWrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Base Table Style */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  min-width: 600px; /* Ensures horizontal scroll on smaller screens */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+.table td button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.table td button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .addBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    min-width: 100%;
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+
+  .addBtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
