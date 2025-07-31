@@ -17,7 +17,7 @@ const UserForm = () => {
 
   useEffect(() => {
     if (isEdit) {
-      axios.get(`http://localhost:4000/api/${id}`).then((res) => {
+      axios.get(`https://crud-4-m0vy.onrender.com/api/${id}`).then((res) => {
         const user = res.data.data || res.data;
         setFormData({
           name: user.name || "",
@@ -39,10 +39,10 @@ const UserForm = () => {
     e.preventDefault();
     try {
       if (isEdit) {
-        await axios.put(`http://localhost:4000/api/${id}`, formData);
+        await axios.put(`https://crud-4-m0vy.onrender.com/api/${id}`, formData);
         toast.success("User updated successfully!");
       } else {
-        await axios.post("http://localhost:4000/api/users", formData);
+        await axios.post("https://crud-4-m0vy.onrender.com/api/users", formData);
         toast.success("User added successfully!");
       }
       setTimeout(() => navigate("/"), 1000); // Navigate after toast
