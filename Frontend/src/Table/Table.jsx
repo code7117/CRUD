@@ -12,7 +12,7 @@ const Table = () => {
 
   const getAllUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/users");
+      const res = await axios.get("https://crud-4-m0vy.onrender.com/api/users");
       const data = res.data;
       if (Array.isArray(data)) setUsers(data);
       else if (Array.isArray(data.data)) setUsers(data.data);
@@ -30,7 +30,7 @@ const Table = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure?")) return;
     try {
-      await axios.delete(`http://localhost:4000/api/${id}`);
+      await axios.delete(`https://crud-4-m0vy.onrender.com/api/${id}`);
         toast.success("User delete successfully!");
       getAllUsers();
     } catch (err) {
